@@ -1,0 +1,245 @@
+/* ====================================
+   Large Devices (1200px and below)
+==================================== */
+
+@media (max-width:1200px){
+
+    .hero h1{
+        font-size:50px;
+    }
+
+    .profile-img{
+        width:330px;
+    }
+
+}
+
+/* ====================================
+   Medium Devices (992px and below)
+==================================== */
+
+@media (max-width:992px){
+
+    .navbar{
+        padding:15px 0;
+    }
+
+    .navbar-nav{
+        text-align:center;
+        margin-top:15px;
+    }
+
+    .nav-link{
+        margin:10px 0;
+    }
+
+    .hero{
+        text-align:center;
+        padding-top:120px;
+    }
+
+    .hero .row{
+        flex-direction:column-reverse;
+    }
+
+    .hero h1{
+        font-size:45px;
+    }
+
+    .hero h3{
+        font-size:28px;
+    }
+
+    .profile-img{
+
+        width:300px;
+
+        margin-bottom:40px;
+
+    }
+
+    h2{
+
+        text-align:center;
+
+    }
+
+}
+
+/* ====================================
+   Tablet (768px)
+==================================== */
+
+@media (max-width:768px){
+
+    section{
+
+        padding:70px 0;
+
+    }
+
+    .hero h1{
+
+        font-size:38px;
+
+    }
+
+    .hero h3{
+
+        font-size:24px;
+
+    }
+
+    .hero p{
+
+        font-size:15px;
+
+    }
+
+    .profile-img{
+
+        width:250px;
+
+    }
+
+    .btn{
+
+        width:100%;
+
+        margin-bottom:15px;
+
+    }
+
+    .btn-primary{
+
+        margin-right:0 !important;
+
+    }
+
+    .skill-card{
+
+        margin-bottom:20px;
+
+    }
+
+    footer{
+
+        text-align:center;
+
+    }
+
+}
+
+/* ====================================
+   Mobile Devices (576px)
+==================================== */
+
+@media (max-width:576px){
+
+    body{
+
+        font-size:15px;
+
+    }
+
+    .navbar-brand{
+
+        font-size:24px;
+
+    }
+
+    .hero{
+
+        min-height:auto;
+
+        padding-top:130px;
+
+        padding-bottom:60px;
+
+    }
+
+    .hero h1{
+
+        font-size:32px;
+
+    }
+
+    .hero h3{
+
+        font-size:20px;
+
+    }
+
+    .hero h4{
+
+        font-size:18px;
+
+    }
+
+    .profile-img{
+
+        width:220px;
+
+        border-width:5px;
+
+    }
+
+    h2{
+
+        font-size:30px;
+
+    }
+
+    .skill-card{
+
+        padding:25px;
+
+    }
+
+    .skill-card i{
+
+        font-size:40px;
+
+    }
+
+    .social a{
+
+        width:40px;
+
+        height:40px;
+
+    }
+
+}
+
+/* ====================================
+   Very Small Devices
+==================================== */
+
+@media (max-width:360px){
+
+    .hero h1{
+
+        font-size:28px;
+
+    }
+
+    .hero h3{
+
+        font-size:18px;
+
+    }
+
+    .profile-img{
+
+        width:180px;
+
+    }
+
+    .navbar-brand{
+
+        font-size:20px;
+
+    }
+
+}
