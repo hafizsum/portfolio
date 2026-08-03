@@ -1,208 +1,308 @@
-```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Name | System Engineer</title>
+    <title>Hafiz Sum | System Engineer</title>
+    <meta name="description" content="Hafiz Sum - System Engineer specializing in Networking, AWS Cloud and Infrastructure">
 
-    <style>
-        *{
-            margin:0;
-            padding:0;
-            box-sizing:border-box;
-            font-family:Arial, Helvetica, sans-serif;
-        }
+    <link rel="stylesheet" href="style.css">
 
-        body{
-            background:#f4f6f9;
-            color:#333;
-            line-height:1.6;
-        }
-
-        header{
-            background:#0d47a1;
-            color:white;
-            text-align:center;
-            padding:60px 20px;
-        }
-
-        header h1{
-            font-size:40px;
-        }
-
-        header p{
-            margin-top:10px;
-            font-size:18px;
-        }
-
-        nav{
-            background:#08306b;
-            text-align:center;
-            padding:12px;
-        }
-
-        nav a{
-            color:white;
-            text-decoration:none;
-            margin:0 15px;
-            font-weight:bold;
-        }
-
-        nav a:hover{
-            color:#ffd54f;
-        }
-
-        .container{
-            width:90%;
-            max-width:1000px;
-            margin:auto;
-            padding:30px 0;
-        }
-
-        section{
-            background:white;
-            padding:25px;
-            margin-bottom:20px;
-            border-radius:8px;
-            box-shadow:0 2px 8px rgba(0,0,0,.1);
-        }
-
-        h2{
-            color:#0d47a1;
-            margin-bottom:15px;
-        }
-
-        ul{
-            padding-left:20px;
-        }
-
-        .btn{
-            display:inline-block;
-            background:#0d47a1;
-            color:white;
-            padding:10px 18px;
-            text-decoration:none;
-            border-radius:5px;
-            margin-top:15px;
-        }
-
-        .btn:hover{
-            background:#1565c0;
-        }
-
-        footer{
-            background:#0d47a1;
-            color:white;
-            text-align:center;
-            padding:20px;
-        }
-
-        @media(max-width:700px){
-            header h1{
-                font-size:30px;
-            }
-
-            nav a{
-                display:block;
-                margin:10px 0;
-            }
-        }
-    </style>
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 
 <body>
 
 <header>
-    <h1>Your Name</h1>
-    <p>System Engineer | Network Engineer | AWS Cloud Engineer</p>
+    <nav>
+        <h2 class="logo">Hafiz<span>.</span></h2>
+
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#certifications">Certifications</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
 </header>
 
-<nav>
-    <a href="#about">About</a>
-    <a href="#skills">Skills</a>
-    <a href="#certifications">Certifications</a>
-    <a href="#resume">Resume</a>
-    <a href="#contact">Contact</a>
-</nav>
+
+<section id="home" class="hero">
+
+    <div class="hero-text">
+
+        <h1>
+            Hi, I'm <span>Hafiz Sum</span>
+        </h1>
+
+        <h2>
+            System Engineer | Network Engineer | AWS Cloud Engineer
+        </h2>
+
+        <p>
+            I design, deploy and manage reliable IT infrastructure,
+            cloud environments and enterprise networks.
+        </p>
+
+
+        <div class="buttons">
+
+            <a href="resume.pdf" class="btn">
+                Download Resume
+            </a>
+
+            <a href="#contact" class="btn outline">
+                Contact Me
+            </a>
+
+        </div>
+
+
+    </div>
+
+
+    <div class="profile">
+
+        <img src="assets/profile.jpg" alt="Hafiz Sum">
+
+    </div>
+
+
+</section>
+
+
+
+<section id="about">
 
 <div class="container">
 
-<section id="about">
-    <h2>About Me</h2>
-    <p>
-        Hello! I'm a System Engineer with experience in system administration,
-        enterprise networking, and AWS Cloud services. I enjoy building secure,
-        scalable, and reliable IT infrastructure.
-    </p>
-</section>
+<h2>About Me</h2>
 
-<section id="skills">
-    <h2>Skills</h2>
+<p>
+I am a System Engineer passionate about infrastructure,
+networking and cloud technologies.
 
-    <ul>
-        <li>Windows Server Administration</li>
-        <li>Linux Administration</li>
-        <li>TCP/IP & Routing</li>
-        <li>Switching & VLAN</li>
-        <li>AWS EC2, S3, IAM, VPC</li>
-        <li>DNS & DHCP</li>
-        <li>Virtualization (VMware/Hyper-V)</li>
-        <li>Shell Scripting</li>
-    </ul>
+My expertise includes Linux and Windows server administration,
+enterprise networking, virtualization and AWS cloud solutions.
 
-</section>
-
-<section id="certifications">
-    <h2>Certifications</h2>
-
-    <ul>
-        <li>AWS Certified Cloud Practitioner</li>
-        <li>AWS Solutions Architect Associate</li>
-        <li>CCNA (Optional)</li>
-        <li>Microsoft Azure Fundamentals (Optional)</li>
-    </ul>
-
-</section>
-
-<section id="resume">
-    <h2>Resume</h2>
-
-    <p>
-        Upload your resume PDF to the repository and change the link below.
-    </p>
-
-    <a href="resume.pdf" class="btn" download>
-        Download Resume
-    </a>
-
-</section>
-
-<section id="contact">
-    <h2>Contact</h2>
-
-    <p>Email: your@email.com</p>
-
-    <p>GitHub:
-        <a href="https://github.com/yourusername" target="_blank">
-            github.com/yourusername
-        </a>
-    </p>
-
-    <p>LinkedIn:
-        <a href="https://linkedin.com/in/yourprofile" target="_blank">
-            linkedin.com/in/yourprofile
-        </a>
-    </p>
-
-</section>
+I focus on building secure, scalable and highly available
+technology environments.
+</p>
 
 </div>
 
+</section>
+
+
+
+<section id="skills">
+
+<div class="container">
+
+<h2>Technical Skills</h2>
+
+
+<div class="cards">
+
+
+<div class="card">
+<i class="fa-brands fa-aws"></i>
+<h3>AWS Cloud</h3>
+<p>
+EC2, VPC, IAM, S3, Route53,
+CloudWatch, Load Balancer
+</p>
+</div>
+
+
+<div class="card">
+
+<i class="fa-solid fa-network-wired"></i>
+
+<h3>Networking</h3>
+
+<p>
+TCP/IP, Routing,
+Switching, VLAN,
+Firewall, VPN
+</p>
+
+</div>
+
+
+
+<div class="card">
+
+<i class="fa-solid fa-server"></i>
+
+<h3>Systems</h3>
+
+<p>
+Linux, Windows Server,
+Active Directory,
+DNS, DHCP
+</p>
+
+</div>
+
+
+
+<div class="card">
+
+<i class="fa-solid fa-cloud"></i>
+
+<h3>Infrastructure</h3>
+
+<p>
+VMware, Docker,
+Monitoring,
+Automation
+</p>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+
+
+<section id="projects">
+
+<div class="container">
+
+<h2>Projects</h2>
+
+
+<div class="project">
+
+
+<h3>AWS Infrastructure Deployment</h3>
+
+<p>
+Designed and deployed cloud infrastructure using AWS services
+including EC2, VPC, IAM and security groups.
+</p>
+
+
+</div>
+
+
+
+<div class="project">
+
+<h3>Enterprise Network Implementation</h3>
+
+<p>
+Configured enterprise network infrastructure including VLAN,
+routing, firewall and monitoring solutions.
+</p>
+
+
+</div>
+
+
+
+<div class="project">
+
+<h3>Server Administration</h3>
+
+<p>
+Managed Linux and Windows servers with backup,
+security and performance optimization.
+</p>
+
+
+</div>
+
+
+</div>
+
+</section>
+
+
+
+
+<section id="certifications">
+
+<div class="container">
+
+<h2>Certifications</h2>
+
+
+<ul>
+
+<li>AWS Certified Cloud Practitioner</li>
+
+<li>AWS Solutions Architect Associate</li>
+
+<li>CCNA</li>
+
+<li>Linux Administration Certification</li>
+
+</ul>
+
+
+</div>
+
+</section>
+
+
+
+
+<section id="contact">
+
+<div class="container">
+
+<h2>Contact</h2>
+
+
+<p>
+<i class="fa-solid fa-envelope"></i>
+Email: your-email@example.com
+</p>
+
+
+<p>
+<i class="fa-brands fa-github"></i>
+GitHub:
+<a href="https://github.com/hafizsum">
+github.com/hafizsum
+</a>
+</p>
+
+
+<p>
+<i class="fa-brands fa-linkedin"></i>
+LinkedIn:
+Add your profile link
+</p>
+
+
+</div>
+
+</section>
+
+
+
 <footer>
-    <p>© 2026 Your Name | System Engineer</p>
+
+<p>
+© 2026 Hafiz Sum | System Engineer
+</p>
+
 </footer>
 
+
+<script src="script.js"></script>
+
 </body>
+
 </html>
-```
