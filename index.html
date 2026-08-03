@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Md. Hafizur Rahman · Cloud & DevOps Engineer</title>
+  <title>Md. Hafizur Rahman · Cloud & DevOps</title>
   <!-- Google Font & Font Awesome -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -398,6 +398,16 @@
       color: #0b2b4a;
     }
 
+    .footer-contact .email-link {
+      color: #1a3450;
+      text-decoration: none;
+      transition: 0.2s;
+    }
+
+    .footer-contact .email-link:hover {
+      color: #2563eb;
+    }
+
     /* responsive */
     @media (max-width: 900px) {
       .grid-2col {
@@ -521,18 +531,6 @@
         <hr class="divider-light" />
         <div><i class="fas fa-certificate" style="color: #2563eb; margin-right: 6px;"></i> <strong>Trainings:</strong> IT Support Technician (Competent) · CCNP · RHCSA · RHCE · AWS · CKA (bongoDev)</div>
       </div>
-
-      <!-- Reference -->
-      <div class="card card-hover fade-in fade-in-d5" style="margin-top: 1.5rem; background: #f9fcff;">
-        <div style="display: flex; flex-wrap: wrap; gap: 1.2rem;">
-          <div><i class="fas fa-user-circle" style="color: #2563eb;"></i> <strong>Md. Hafizur</strong><br /><span style="font-size:0.8rem; color: #2b4d6b;">10-Feb-2000 · Bangladesh</span></div>
-          <div><i class="fas fa-address-book" style="color: #2563eb;"></i> <strong>Reference</strong><br /><span style="font-size:0.8rem; color: #2b4d6b;">Md. Muzammel Hoque · Genuity Systems</span></div>
-        </div>
-        <div style="margin-top: 0.8rem; border-top: 1px dashed #dce6f0; padding-top: 0.8rem; font-size:0.85rem; color: #1f3f5a;">
-          <i class="fas fa-check-circle" style="color: #2563eb;"></i> I declare the information furnished above is true.
-        </div>
-        <div style="margin-top: 0.5rem; text-align: right; font-style: italic; color: #1f3f5a;">— Md. Hafizur Rahman</div>
-      </div>
     </div>
 
     <!-- RIGHT COLUMN: skills -->
@@ -614,7 +612,9 @@
   <!-- footer -->
   <div class="footer-contact fade-in fade-in-d5">
     <div>
-      <i class="fas fa-envelope"></i> hafizurrahman.cse2000@gmail.com &nbsp;|&nbsp;
+      <i class="fas fa-envelope"></i>
+      <a href="mailto:hafizurrahman.cse2000@gmail.com" class="email-link">hafizurrahman.cse2000@gmail.com</a>
+      &nbsp;|&nbsp;
       <i class="fas fa-phone-alt"></i> 01733-659094
     </div>
     <div>
@@ -629,7 +629,7 @@
 <!-- end container -->
 
 <script>
-  // (optional) subtle animation for skill bars on load
+  // subtle animation for skill bars on load
   document.addEventListener('DOMContentLoaded', function() {
     const fills = document.querySelectorAll('.skill-bar-fill');
     fills.forEach(fill => {
