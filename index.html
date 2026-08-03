@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Md. Hafizur Rahman · Cloud & DevOps Portfolio</title>
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    }
+
+    body {
+      background: #f7fafc;
+      color: #1e293b;
+      line-height: 1.6;
+      padding: 2rem 1rem;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      background: white;
+      border-radius: 2rem;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.06);
+      padding: 2.5rem 2rem;
+    }
+
+    /* header / profile */
+    .profile-header {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #e9edf2;
+      padding-bottom: 2rem;
+      margin-bottom: 2rem;
+    }
+
+    .profile-info h1 {
+      font-size: 2.6rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      background: linear-gradient(145deg, #0b2b4a, #1a4b6d);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .profile-info .badge {
+      background: #dbeafe;
+      color: #1e4b7a;
+      padding: 0.25rem 1rem;
+      border-radius: 30px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      display: inline-block;
+      margin-top: 0.3rem;
+    }
+
+    .profile-contact {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.2rem;
+      background: #f1f5f9;
+      padding: 0.8rem 1.5rem;
+      border-radius: 50px;
+      font-size: 0.95rem;
+    }
+
+    .profile-contact a {
+      color: #1e293b;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    .profile-contact a i {
+      color: #2563eb;
+      width: 1.2rem;
+    }
+
+    /* grid layout */
+    .grid-2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2.5rem;
+      margin-top: 1.5rem;
+    }
+
+    .card {
+      background: #ffffff;
+      border-radius: 1.5rem;
+      padding: 1.5rem 1.8rem;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.02);
+      border: 1px solid #edf2f7;
+      transition: 0.2s ease;
+    }
+
+    .card:hover {
+      border-color: #cbd5e1;
+    }
+
+    .card-title {
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: #0f2b44;
+      border-left: 5px solid #2563eb;
+      padding-left: 0.8rem;
+      margin-bottom: 1.2rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .card-title i {
+      color: #2563eb;
+      font-size: 1.3rem;
+    }
+
+    .skill-tag {
+      display: inline-block;
+      background: #eef2f6;
+      padding: 0.2rem 0.9rem;
+      border-radius: 30px;
+      font-size: 0.8rem;
+      font-weight: 500;
+      color: #1e3b5c;
+      margin: 0.2rem 0.2rem;
+    }
+
+    .skill-bar-wrap {
+      margin: 0.8rem 0;
+    }
+
+    .skill-bar-label {
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.9rem;
+      font-weight: 500;
+    }
+
+    .skill-bar-bg {
+      width: 100%;
+      height: 6px;
+      background: #e2e8f0;
+      border-radius: 12px;
+      margin-top: 4px;
+    }
+
+    .skill-bar-fill {
+      height: 6px;
+      border-radius: 12px;
+      background: linear-gradient(90deg, #2563eb, #3b82f6);
+    }
+
+    .exp-item {
+      margin-bottom: 1.5rem;
+    }
+
+    .exp-item h4 {
+      font-weight: 700;
+      font-size: 1.05rem;
+      color: #0b2b4a;
+    }
+
+    .exp-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem 1.2rem;
+      font-size: 0.85rem;
+      color: #475569;
+      margin: 0.2rem 0 0.4rem;
+    }
+
+    .exp-meta i {
+      margin-right: 0.3rem;
+      color: #3b82f6;
+    }
+
+    .bullet-list {
+      list-style: none;
+      padding-left: 0.2rem;
+    }
+
+    .bullet-list li {
+      padding-left: 1.2rem;
+      position: relative;
+      margin-bottom: 0.3rem;
+      font-size: 0.92rem;
+    }
+
+    .bullet-list li::before {
+      content: "▹";
+      position: absolute;
+      left: 0;
+      color: #2563eb;
+    }
+
+    .cert-badge {
+      background: #f8fafc;
+      border-radius: 40px;
+      padding: 0.3rem 1.2rem;
+      border: 1px solid #e2e8f0;
+      display: inline-block;
+      margin: 0.2rem 0.3rem 0.2rem 0;
+      font-size: 0.8rem;
+      font-weight: 500;
+    }
+
+    .inline-icon {
+      margin-right: 0.4rem;
+      color: #2563eb;
+    }
+
+    .row-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.2rem;
+      margin-top: 1rem;
+    }
+
+    .stat-box {
+      background: #f8fafc;
+      border-radius: 1.2rem;
+      padding: 0.8rem 0.5rem;
+      text-align: center;
+      border: 1px solid #eef2f6;
+    }
+
+    .stat-box .number {
+      font-size: 1.6rem;
+      font-weight: 700;
+      color: #1e4b7a;
+    }
+
+    @media (max-width: 800px) {
+      .grid-2 {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+      }
+      .row-3 {
+        grid-template-columns: 1fr 1fr;
+      }
+      .profile-header {
+        flex-direction: column;
+        align-items: start;
+        gap: 1.2rem;
+      }
+      .profile-contact {
+        border-radius: 30px;
+        width: 100%;
+        justify-content: center;
+      }
+    }
+
+    @media (max-width: 500px) {
+      .row-3 {
+        grid-template-columns: 1fr;
+      }
+      .container {
+        padding: 1.5rem 1rem;
+      }
+    }
+
+    .footer-note {
+      margin-top: 2.5rem;
+      text-align: center;
+      font-size: 0.85rem;
+      color: #64748b;
+      border-top: 1px solid #e9edf2;
+      padding-top: 1.5rem;
+    }
+
+    .signature {
+      font-weight: 500;
+      color: #0b2b4a;
+    }
+
+    .badge-soft {
+      background: #dbeafe;
+      color: #1e4b7a;
+      border-radius: 30px;
+      padding: 0.15rem 1rem;
+      font-size: 0.75rem;
+      font-weight: 600;
+      display: inline-block;
+    }
+
+    hr {
+      border: none;
+      border-top: 1px solid #e2e8f0;
+      margin: 1.2rem 0;
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+
+  <!-- header -->
+  <div class="profile-header">
+    <div class="profile-info">
+      <h1>Md. Hafizur Rahman</h1>
+      <div class="badge"><i class="fas fa-cloud" style="margin-right: 6px;"></i>Cloud & DevOps Engineer</div>
+      <div style="margin-top: 8px; display: flex; flex-wrap: wrap; gap: 0.5rem;">
+        <span class="badge-soft"><i class="fas fa-certificate"></i> RHCSA · AWS SAA</span>
+        <span class="badge-soft"><i class="fas fa-server"></i> 5.5+ years IT</span>
+      </div>
+    </div>
+    <div class="profile-contact">
+      <a href="mailto:hafizurrahman.cse2000@gmail.com"><i class="fas fa-envelope"></i>hafizur.cse</a>
+      <a href="#"><i class="fas fa-phone-alt"></i>01733-659094</a>
+      <a href="#"><i class="fas fa-map-pin"></i>Dhaka, BD</a>
+    </div>
+  </div>
+
+  <!-- summary + stats -->
+  <div style="display: flex; flex-wrap: wrap; gap: 1.5rem; justify-content: space-between; background: #f1f6fc; padding: 1.2rem 1.8rem; border-radius: 2rem; margin-bottom: 2rem;">
+    <div><i class="fas fa-bullseye" style="color: #2563eb; margin-right: 8px;"></i> <strong>Career objective:</strong> System Admin · Cloud · DevOps</div>
+    <div><i class="fas fa-calendar-alt" style="color: #2563eb; margin-right: 8px;"></i> <strong>5.5+</strong> years total experience</div>
+    <div><i class="fas fa-microchip" style="color: #2563eb; margin-right: 8px;"></i> AWS · Kubernetes · Linux · Monitoring</div>
+  </div>
+
+  <!-- grid main -->
+  <div class="grid-2">
+
+    <!-- LEFT COLUMN: experience, certs, education -->
+    <div>
+      <!-- Experience -->
+      <div class="card">
+        <div class="card-title"><i class="fas fa-briefcase"></i> Experience</div>
+        <div class="exp-item">
+          <h4>Engineer, Network Operations</h4>
+          <div class="exp-meta"><i class="fas fa-building"></i>Genuity Systems Ltd. <span>|</span> <i class="fas fa-calendar-alt"></i>Oct 2024 – present</div>
+          <ul class="bullet-list">
+            <li>Network operations, cloud & system administration.</li>
+          </ul>
+        </div>
+        <div class="exp-item">
+          <h4>Support Engineer, NOC (A2P SMS)</h4>
+          <div class="exp-meta"><i class="fas fa-building"></i>Infozillion Teletech BD Ltd. <span>|</span> <i class="fas fa-calendar-alt"></i>Aug 2023 – Oct 2024</div>
+          <ul class="bullet-list"><li>NOC support, A2P SMS platform monitoring.</li></ul>
+        </div>
+        <div class="exp-item">
+          <h4>Support Engineer, NOC (ISP)</h4>
+          <div class="exp-meta"><i class="fas fa-building"></i>Tuhin Enterprise (ISP) <span>|</span> <i class="fas fa-calendar-alt"></i>Nov 2021 – Aug 2023</div>
+        </div>
+        <div class="exp-item">
+          <h4>Jr. Support Engineer, NOC</h4>
+          <div class="exp-meta"><i class="fas fa-building"></i>Amarnt System (Central Zone ISP) <span>|</span> <i class="fas fa-calendar-alt"></i>Jun 2020 – Jun 2021</div>
+        </div>
+        <hr>
+        <div><i class="fas fa-award" style="color: #2563eb; margin-right: 8px;"></i> <strong>Vendor certifications:</strong> 
+          <span class="cert-badge"><i class="fab fa-redhat"></i> RHCSA</span>
+          <span class="cert-badge"><i class="fab fa-aws"></i> AWS Solutions Architect – Associate</span>
+        </div>
+      </div>
+
+      <!-- Education -->
+      <div class="card" style="margin-top: 1.5rem;">
+        <div class="card-title"><i class="fas fa-graduation-cap"></i> Education</div>
+        <div><strong>B.Sc. in CSE</strong> · CGPA 3.84 · 2024 <br> <span style="color: #475569;">University of South Asia</span></div>
+        <div style="margin-top: 0.8rem;"><strong>Diploma in Engineering (CSE)</strong> · CGPA 3.96 · 2020 <br> <span style="color: #475569;">Sherpur Technical School & College</span></div>
+        <div style="margin-top: 0.8rem;"><strong>S.S.C.</strong> · GPA 4.22 · 2016 <br> <span style="color: #475569;">Tirsha Basaria Janakollayan High School</span></div>
+        <hr>
+        <div><i class="fas fa-certificate" style="color: #2563eb; margin-right: 6px;"></i> <strong>Trainings:</strong> IT Support Technician (Competent), CCNP, RHCSA, RHCE, AWS, CKA (bongoDev)</div>
+      </div>
+    </div>
+
+    <!-- RIGHT COLUMN: skills, cloud, k8s, monitoring -->
+    <div>
+      <!-- Linux / virtualization -->
+      <div class="card">
+        <div class="card-title"><i class="fab fa-linux"></i> Linux & Virtualization</div>
+        <div style="display: flex; flex-wrap: wrap; gap: 0.3rem 0.5rem; margin-bottom: 0.5rem;">
+          <span class="skill-tag"><i class="fas fa-check-circle" style="color: #2563eb;"></i> RHEL/CentOS</span>
+          <span class="skill-tag"><i class="fas fa-check-circle" style="color: #2563eb;"></i> User & permission</span>
+          <span class="skill-tag"><i class="fas fa-check-circle" style="color: #2563eb;"></i> NFS/NTP</span>
+          <span class="skill-tag"><i class="fas fa-check-circle" style="color: #2563eb;"></i> LVM · Partition</span>
+          <span class="skill-tag"><i class="fas fa-check-circle" style="color: #2563eb;"></i> SELinux · Firewalld</span>
+          <span class="skill-tag"><i class="fas fa-check-circle" style="color: #2563eb;"></i> Cron · systemd</span>
+        </div>
+        <div><i class="fas fa-server" style="color: #2563eb; width: 1.2rem;"></i> <strong>Virtualization:</strong> VMware ESXi · Proxmox · Hyper-V · KVM</div>
+        <div style="margin-top: 0.6rem;"><i class="fas fa-terminal"></i> Vim · Vi · Nano · bash scripting</div>
+      </div>
+
+      <!-- Cloud & AWS -->
+      <div class="card" style="margin-top: 1.5rem;">
+        <div class="card-title"><i class="fab fa-aws"></i> Cloud (AWS)</div>
+        <ul class="bullet-list">
+          <li>EC2 · Auto Scaling · Load Balancer · VPC · Subnet · NAT</li>
+          <li>Security Groups · NACL · AMI · S3 · Route53 · IAM</li>
+          <li>CloudFront · basic CI/CD · high availability design</li>
+        </ul>
+        <div class="skill-bar-wrap">
+          <div class="skill-bar-label"><span>AWS infrastructure</span> <span>85%</span></div>
+          <div class="skill-bar-bg"><div class="skill-bar-fill" style="width:85%"></div></div>
+        </div>
+      </div>
+
+      <!-- Kubernetes & Monitoring -->
+      <div class="card" style="margin-top: 1.5rem;">
+        <div class="card-title"><i class="fas fa-cubes"></i> Kubernetes</div>
+        <div style="display: flex; flex-wrap: wrap; gap: 0.3rem;">
+          <span class="skill-tag">Pods · Deployments</span>
+          <span class="skill-tag">Services (ClusterIP/NodePort/LB)</span>
+          <span class="skill-tag">StatefulSets · Jobs</span>
+          <span class="skill-tag">PV · Ingress · Rolling/Blue-green</span>
+          <span class="skill-tag">CI/CD · GitOps</span>
+          <span class="skill-tag">Monitoring & security</span>
+        </div>
+        <hr>
+        <div class="card-title" style="border-left-color: #0b8b5e; margin-top: 0.5rem;"><i class="fas fa-chart-line" style="color: #0b8b5e;"></i> Monitoring</div>
+        <div><span class="skill-tag"><i class="fas fa-check"></i> Grafana+Prometheus</span> <span class="skill-tag">Nagios</span> <span class="skill-tag">Cacti</span> <span class="skill-tag">LibreNMS</span></div>
+        <div style="margin-top: 0.5rem; font-size: 0.9rem;"><i class="fas fa-bell" style="color: #2563eb;"></i> Real-time dashboards · alerting</div>
+      </div>
+
+      <!-- personal & reference quick -->
+      <div class="card" style="margin-top: 1.5rem; background: #fafcff;">
+        <div style="display: flex; gap: 1.2rem; flex-wrap: wrap;">
+          <div><i class="fas fa-user" style="color: #2563eb;"></i> <strong>MD. Hafizur</strong><br> <span style="font-size:0.85rem;">Bangladesh · 10-Feb-2000</span></div>
+          <div><i class="fas fa-address-book" style="color: #2563eb;"></i> <strong>Reference</strong><br> <span style="font-size:0.85rem;">Md. Muzammel Hoque · Genuity Systems</span></div>
+        </div>
+        <div style="margin-top: 0.8rem; border-top: 1px dashed #dce2ec; padding-top: 0.8rem; font-size:0.9rem;">
+          <i class="fas fa-check-circle" style="color: #2563eb;"></i> I declare the information furnished above is true.
+        </div>
+        <div style="margin-top: 0.6rem; text-align: right; font-style: italic; color: #334155;">— Md. Hafizur Rahman</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- stats row: similar to naimul.cloud stats -->
+  <div class="row-3" style="margin-top: 2.2rem;">
+    <div class="stat-box"><span class="number">5.5+</span><br>Years IT Experience</div>
+    <div class="stat-box"><span class="number">4+</span><br>Cloud & DevOps</div>
+    <div class="stat-box"><span class="number">24/7</span><br>Uptime Support</div>
+  </div>
+
+  <!-- footer / contact -->
+  <div class="footer-note">
+    <i class="fas fa-envelope" style="margin-right: 6px; color: #2563eb;"></i> hafizurrahman.cse2000@gmail.com · 
+    <i class="fas fa-phone-alt" style="margin-left: 12px; margin-right: 6px; color: #2563eb;"></i> 01733-659094 · 
+    <i class="fas fa-map-pin" style="margin-left: 12px; margin-right: 6px; color: #2563eb;"></i> Dhaka-1229, Bangladesh
+    <br>
+    <span style="font-size:0.8rem; color: #94a3b8;">House-27, Road-04, Nikunj-2, Khilkhet</span>
+  </div>
+</div>
+<!-- end container -->
+</body>
+</html>
