@@ -92,6 +92,23 @@
       color: #fff;
     }
 
+    .btn-small {
+      display: inline-block;
+      padding: 0.4rem 1.2rem;
+      border-radius: 30px;
+      font-size: 0.8rem;
+      margin-top: 1rem;
+      border: 2px solid #0b5e8a;
+      color: #0b5e8a;
+      transition: 0.2s ease;
+      font-weight: 500;
+    }
+
+    .btn-small:hover {
+      background: #0b5e8a;
+      color: #fff;
+    }
+
     .badge {
       background: #e2e9f2;
       color: #1a3a54;
@@ -128,6 +145,12 @@
       background: #e0eef7;
       color: #1a4a66;
       border: 1px solid #b0cce0;
+    }
+
+    .badge-success {
+      background: #d4edda;
+      color: #155724;
+      border: 1px solid #c3e6cb;
     }
 
     /* ----- header / nav ----- */
@@ -205,8 +228,10 @@
 
     .hero-description {
       color: #2a4b68;
-      max-width: 520px;
+      max-width: 600px;
       margin-bottom: 1.8rem;
+      font-size: 1.05rem;
+      line-height: 1.7;
     }
 
     .hero-stats {
@@ -273,6 +298,10 @@
       background: #ffffff;
     }
 
+    .section-dark {
+      background: #f0f5fa;
+    }
+
     /* ----- skills / cards ----- */
     .skills-grid {
       display: grid;
@@ -312,6 +341,59 @@
       color: #2c4a66;
     }
 
+    /* ----- toolbox section ----- */
+    .toolbox-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 2rem;
+      margin-top: 1rem;
+    }
+
+    .toolbox-category {
+      background: #f6faff;
+      padding: 1.8rem 1.5rem;
+      border-radius: 24px;
+      border: 1px solid #e2ebf5;
+      transition: 0.2s;
+    }
+
+    .toolbox-category:hover {
+      border-color: #0b5e8a;
+      box-shadow: 0 8px 20px rgba(11, 94, 138, 0.08);
+    }
+
+    .toolbox-category h4 {
+      font-size: 1.1rem;
+      margin-bottom: 1rem;
+      color: #0b2b44;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .toolbox-category h4 i {
+      color: #0b5e8a;
+    }
+
+    .toolbox-category ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .toolbox-category ul li {
+      padding: 0.3rem 0;
+      color: #2c4a66;
+      font-size: 0.95rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .toolbox-category ul li i {
+      color: #0b5e8a;
+      font-size: 0.7rem;
+    }
+
     /* ----- experience timeline ----- */
     .timeline {
       display: flex;
@@ -328,6 +410,11 @@
       padding: 1.5rem 2rem;
       border-radius: 24px;
       border-left: 6px solid #0b5e8a;
+      transition: 0.2s;
+    }
+
+    .timeline-item:hover {
+      box-shadow: 0 8px 24px rgba(11, 94, 138, 0.08);
     }
 
     .timeline-year {
@@ -351,6 +438,21 @@
     .timeline-desc {
       color: #2c4a66;
       font-size: 0.95rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .timeline-achievement {
+      color: #0b5e8a;
+      font-size: 0.92rem;
+      background: #e8f0f8;
+      padding: 0.4rem 0.8rem;
+      border-radius: 12px;
+      display: inline-block;
+      margin-top: 0.3rem;
+    }
+
+    .timeline-achievement i {
+      margin-right: 0.4rem;
     }
 
     .badge-group {
@@ -427,7 +529,6 @@
       border-left: 4px solid #8bb3d0;
     }
 
-    /* vendor item style from reference */
     .vendor-item {
       display: inline-flex;
       align-items: center;
@@ -459,7 +560,7 @@
     /* ----- projects ----- */
     .project-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 2rem;
     }
 
@@ -470,6 +571,8 @@
       box-shadow: 0 8px 20px rgba(0, 0, 0, 0.02);
       border: 1px solid #e2ebf5;
       transition: 0.25s;
+      display: flex;
+      flex-direction: column;
     }
 
     .project-card:hover {
@@ -485,19 +588,57 @@
 
     .project-card h3 {
       font-size: 1.2rem;
-      margin-bottom: 0.3rem;
+      margin-bottom: 0.5rem;
     }
 
     .project-card p {
       color: #2c4a66;
       font-size: 0.95rem;
       margin-bottom: 1rem;
+      flex-grow: 1;
+    }
+
+    .project-card p strong {
+      color: #0b2b44;
     }
 
     .project-tags {
       display: flex;
       flex-wrap: wrap;
       gap: 0.3rem;
+      margin-bottom: 0.5rem;
+    }
+
+    /* ----- soft skills ----- */
+    .soft-skills-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      justify-content: center;
+      margin-top: 1rem;
+    }
+
+    .soft-skill-item {
+      background: #f6faff;
+      padding: 0.8rem 1.8rem;
+      border-radius: 40px;
+      border: 1px solid #e2ebf5;
+      font-weight: 500;
+      color: #0b2b44;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      transition: 0.2s;
+    }
+
+    .soft-skill-item:hover {
+      border-color: #0b5e8a;
+      transform: translateY(-2px);
+    }
+
+    .soft-skill-item i {
+      color: #0b5e8a;
+      font-size: 1rem;
     }
 
     /* ----- contact / footer ----- */
@@ -625,6 +766,7 @@
       <div class="logo"><span>☁️</span> Hafiz<span>ur</span></div>
       <div class="nav-links">
         <a href="#skills">Skills</a>
+        <a href="#toolbox">Toolbox</a>
         <a href="#experience">Experience</a>
         <a href="#credentials">Certifications</a>
         <a href="#projects">Projects</a>
@@ -640,8 +782,9 @@
         <h1>Md. Hafizur <span class="highlight">Rahman</span></h1>
         <div class="hero-tagline"><i class="fas fa-cloud" style="color:#0b5e8a; margin-right:8px;"></i> System & Cloud Engineer</div>
         <p class="hero-description">
-          RHCSA · AWS Certified · 5.5+ years in network operations, cloud infrastructure, and Kubernetes.
-          Passionate about automation, high availability, and DevSecOps.
+          <strong>RHCSA & AWS Certified</strong> Cloud Engineer with <strong>5.5+ years</strong> of experience architecting and maintaining high-availability systems in both on-premise and cloud environments. 
+          Specialized in automating infrastructure delivery with <strong>Terraform</strong> and <strong>Ansible</strong>, and orchestrating containerized applications with <strong>Kubernetes</strong>. 
+          Proven ability to reduce operational costs and improve system reliability through strategic automation and monitoring.
         </p>
         <a href="#contact" class="btn"><i class="fas fa-paper-plane" style="margin-right:8px;"></i> Hire me</a>
         <div class="hero-stats">
@@ -653,6 +796,10 @@
             <i class="fas fa-certificate"></i>
             <div><span class="stat-number">2</span> <span class="stat-label">vendor certs</span></div>
           </div>
+          <div class="stat-item">
+            <i class="fas fa-project-diagram"></i>
+            <div><span class="stat-number">12+</span> <span class="stat-label">projects</span></div>
+          </div>
         </div>
       </div>
       <div class="hero-avatar">
@@ -663,17 +810,67 @@
     </div>
   </section>
 
-  <!-- skills -->
+  <!-- core expertise -->
   <section id="skills" class="section-alt">
     <div class="container">
       <h2>Core expertise</h2>
       <div class="section-subtitle">Cloud · Linux · automation · orchestration</div>
       <div class="skills-grid">
-        <div class="skill-card"><i class="fab fa-aws"></i><h3>AWS</h3><p>EC2, VPC, S3, IAM, CloudFront, RDS</p></div>
+        <div class="skill-card"><i class="fab fa-aws"></i><h3>AWS</h3><p>EC2, VPC, S3, IAM, CloudFront, RDS, Lambda</p></div>
         <div class="skill-card"><i class="fab fa-linux"></i><h3>Linux / RHEL</h3><p>RHCSA, RHEL, CentOS, Ubuntu, SELinux</p></div>
-        <div class="skill-card"><i class="fas fa-cubes"></i><h3>Kubernetes</h3><p>Pods, Deployments, Ingress, Helm, GitOps</p></div>
+        <div class="skill-card"><i class="fas fa-cubes"></i><h3>Kubernetes</h3><p>EKS, Pods, Deployments, Ingress, Helm, GitOps</p></div>
         <div class="skill-card"><i class="fas fa-code"></i><h3>IaC</h3><p>Terraform, Ansible, CloudFormation</p></div>
         <div class="skill-card"><i class="fas fa-chart-line"></i><h3>Monitoring</h3><p>Prometheus, Grafana, Nagios, Cacti</p></div>
+        <div class="skill-card"><i class="fas fa-sync-alt"></i><h3>CI/CD</h3><p>Jenkins, GitHub Actions, GitLab CI</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- technical toolbox -->
+  <section id="toolbox" class="section-dark">
+    <div class="container">
+      <h2>Technical Toolbox</h2>
+      <div class="section-subtitle">A detailed look at my daily tools and technologies</div>
+      <div class="toolbox-grid">
+        <div class="toolbox-category">
+          <h4><i class="fas fa-cloud"></i> Cloud & IaC</h4>
+          <ul>
+            <li><i class="fas fa-check-circle"></i> AWS (EC2, VPC, S3, RDS, IAM, Lambda)</li>
+            <li><i class="fas fa-check-circle"></i> Terraform / OpenTofu</li>
+            <li><i class="fas fa-check-circle"></i> AWS CloudFormation</li>
+            <li><i class="fas fa-check-circle"></i> Ansible (Automation & Config Mgmt)</li>
+          </ul>
+        </div>
+
+        <div class="toolbox-category">
+          <h4><i class="fas fa-code"></i> CI/CD & Automation</h4>
+          <ul>
+            <li><i class="fas fa-check-circle"></i> Jenkins, GitLab CI</li>
+            <li><i class="fas fa-check-circle"></i> GitHub Actions</li>
+            <li><i class="fas fa-check-circle"></i> Git (GitHub, GitLab)</li>
+            <li><i class="fas fa-check-circle"></i> Python, Bash Scripting</li>
+          </ul>
+        </div>
+
+        <div class="toolbox-category">
+          <h4><i class="fas fa-cubes"></i> Containers & Orchestration</h4>
+          <ul>
+            <li><i class="fas fa-check-circle"></i> Kubernetes (EKS, K8s)</li>
+            <li><i class="fas fa-check-circle"></i> Docker, Podman</li>
+            <li><i class="fas fa-check-circle"></i> Helm, Kustomize</li>
+            <li><i class="fas fa-check-circle"></i> ArgoCD (GitOps)</li>
+          </ul>
+        </div>
+
+        <div class="toolbox-category">
+          <h4><i class="fas fa-eye"></i> Monitoring & Logging</h4>
+          <ul>
+            <li><i class="fas fa-check-circle"></i> Prometheus, Grafana</li>
+            <li><i class="fas fa-check-circle"></i> ELK Stack / Loki</li>
+            <li><i class="fas fa-check-circle"></i> Nagios, Cacti</li>
+            <li><i class="fas fa-check-circle"></i> AWS CloudWatch</li>
+          </ul>
+        </div>
       </div>
     </div>
   </section>
@@ -682,7 +879,7 @@
   <section id="experience">
     <div class="container">
       <h2>Experience</h2>
-      <div class="section-subtitle">Network operations · cloud engineering</div>
+      <div class="section-subtitle">Network operations · cloud engineering · measurable results</div>
       <div class="timeline">
         <div class="timeline-item">
           <div class="timeline-year">2024 – now</div>
@@ -692,6 +889,9 @@
             <div class="timeline-desc">
               Managing large-scale network and cloud infrastructure, ensuring high availability, 
               and automating operational tasks with Ansible and Python.
+            </div>
+            <div class="timeline-achievement">
+              <i class="fas fa-chart-line"></i> Reduced incident response time by 25% through automated Ansible playbooks
             </div>
             <div class="badge-group">
               <span class="badge badge-cloud">AWS</span>
@@ -709,6 +909,9 @@
               Operated and maintained A2P SMS platform infrastructure, monitored systems via Grafana/Prometheus, 
               and resolved critical incidents.
             </div>
+            <div class="timeline-achievement">
+              <i class="fas fa-check-circle"></i> Maintained 99.9% platform uptime for 1M+ messages/day
+            </div>
             <div class="badge-group">
               <span class="badge badge-cloud">Grafana</span>
               <span class="badge badge-sys">Prometheus</span>
@@ -724,6 +927,9 @@
             <div class="timeline-desc">
               Managed ISP core network, Linux servers, virtualization (VMware, Proxmox), 
               and implemented monitoring solutions.
+            </div>
+            <div class="timeline-achievement">
+              <i class="fas fa-dollar-sign"></i> Reduced hardware costs by 30% through virtualization migration
             </div>
             <div class="badge-group">
               <span class="badge badge-sys">VMware</span>
@@ -812,49 +1018,90 @@
     </div>
   </section>
 
+
   <!-- projects -->
-  <section id="projects">
+  <section id="projects" class="section-dark">
     <div class="container">
       <h2>Key projects</h2>
-      <div class="section-subtitle">Cloud, Kubernetes & automation</div>
+      <div class="section-subtitle">Cloud, Kubernetes & automation with measurable outcomes</div>
       <div class="project-grid">
         <div class="project-card">
           <i class="fas fa-cloud-upload-alt"></i>
           <h3>AWS HA Infrastructure</h3>
-          <p>Designed and deployed highly available architecture using EC2, Auto Scaling, Load Balancers, VPC, and S3.</p>
+          <p>
+            <strong>Challenge:</strong> Manual infrastructure provisioning was slow and error-prone.
+            <br>
+            <strong>Solution:</strong> Designed and deployed highly available architecture using EC2, Auto Scaling, Load Balancers, VPC, and S3 with Terraform for IaC.
+            <br>
+            <strong>Result:</strong> Achieved 99.95% SLA with full environment rebuilds in under 15 minutes.
+          </p>
           <div class="project-tags">
             <span class="badge badge-cloud">AWS</span>
             <span class="badge badge-cloud">Terraform</span>
+            <span class="badge badge-sys">Auto Scaling</span>
           </div>
+          <a href="#" class="btn-small"><i class="fab fa-github"></i> View on GitHub</a>
         </div>
         <div class="project-card">
           <i class="fas fa-dharmachakra"></i>
-          <h3>K8s 3‑tier deployment</h3>
-          <p>Deployed stateful & stateless applications on Kubernetes with Ingress, Persistent Volumes, and blue‑green strategy.</p>
+          <h3>K8s GitOps with ArgoCD</h3>
+          <p>
+            <strong>Challenge:</strong> Slow and inconsistent deployment processes.
+            <br>
+            <strong>Solution:</strong> Implemented GitOps workflow using ArgoCD for a 3-tier application on Kubernetes with Ingress and Persistent Volumes.
+            <br>
+            <strong>Result:</strong> Reduced deployment time by 40% and enabled automatic rollbacks on failure.
+          </p>
           <div class="project-tags">
             <span class="badge badge-cloud">Kubernetes</span>
-            <span class="badge badge-sys">Helm</span>
+            <span class="badge badge-sys">ArgoCD</span>
+            <span class="badge badge-cloud">Helm</span>
           </div>
+          <a href="#" class="btn-small"><i class="fab fa-github"></i> View on GitHub</a>
         </div>
         <div class="project-card">
           <i class="fas fa-chart-pie"></i>
-          <h3>Grafana · Prometheus stack</h3>
-          <p>Built real‑time dashboards and alerting for infrastructure health, integrated with AWS and on‑prem systems.</p>
+          <h3>Monitoring Stack with Prometheus</h3>
+          <p>
+            <strong>Challenge:</strong> No visibility into system health and performance.
+            <br>
+            <strong>Solution:</strong> Built real-time dashboards and alerting using Grafana and Prometheus, integrated with AWS and on-premise systems.
+            <br>
+            <strong>Result:</strong> Proactively identified 90% of potential system bottlenecks before user impact.
+          </p>
           <div class="project-tags">
             <span class="badge badge-cloud">Grafana</span>
             <span class="badge badge-sys">Prometheus</span>
+            <span class="badge badge-cloud">AWS CloudWatch</span>
           </div>
+          <a href="#" class="btn-small"><i class="fab fa-github"></i> View on GitHub</a>
         </div>
       </div>
     </div>
   </section>
 
+  <!-- soft skills -->
+  <section id="soft-skills">
+    <div class="container">
+      <h2>Beyond Technology</h2>
+      <div class="section-subtitle">Professional competencies that drive results</div>
+      <div class="soft-skills-grid">
+        <span class="soft-skill-item"><i class="fas fa-users"></i> Cross-functional Collaboration</span>
+        <span class="soft-skill-item"><i class="fas fa-comments"></i> Technical Communication</span>
+        <span class="soft-skill-item"><i class="fas fa-lightbulb"></i> Problem Solving</span>
+        <span class="soft-skill-item"><i class="fas fa-clock"></i> Time Management</span>
+        <span class="soft-skill-item"><i class="fas fa-graduation-cap"></i> Continuous Learning</span>
+        <span class="soft-skill-item"><i class="fas fa-tasks"></i> Project Management</span>
+      </div>
+    </div>
+  </section>
+
   <!-- contact -->
-  <section id="contact">
+  <section id="contact" class="section-alt">
     <div class="container">
       <div class="contact-box">
         <div>
-          <h2>Let’s work together</h2>
+          <h2>Let's work together</h2>
           <p><i class="fas fa-envelope" style="color:#0b5e8a; margin-right:8px;"></i> hafizurrahman.cse2000@gmail.com</p>
           <p><i class="fas fa-phone" style="color:#0b5e8a; margin-right:8px;"></i> +880 1733-659094</p>
           <p><i class="fas fa-map-pin" style="color:#0b5e8a; margin-right:8px;"></i> Dhaka, Bangladesh</p>
