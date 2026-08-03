@@ -1,7 +1,6 @@
 /* ===========================
    Google Font
 =========================== */
-
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
 
 /* ===========================
@@ -19,15 +18,10 @@ html{
 }
 
 body{
-
     font-family:'Poppins',sans-serif;
-
     background:#0B1120;
-
     color:#ffffff;
-
     line-height:1.7;
-
 }
 
 a{
@@ -47,39 +41,31 @@ section{
 =========================== */
 
 .navbar{
-
     background:rgba(11,17,32,.95);
-
     backdrop-filter:blur(10px);
-
     transition:.4s;
-
+    padding:15px 0;
 }
 
 .navbar-brand{
-
     font-size:28px;
-
     font-weight:700;
-
     color:#3B82F6 !important;
-
 }
 
 .nav-link{
-
     color:#ffffff !important;
-
     margin-left:20px;
-
     transition:.3s;
-
 }
 
 .nav-link:hover{
-
     color:#3B82F6 !important;
+}
 
+.nav-link.active{
+    color:#3B82F6 !important;
+    font-weight:600;
 }
 
 /* ===========================
@@ -87,61 +73,43 @@ section{
 =========================== */
 
 .hero{
-
     min-height:100vh;
-
     display:flex;
-
     align-items:center;
-
     background:linear-gradient(135deg,#0B1120,#111827);
-
 }
 
 .hero h4{
-
     color:#3B82F6;
-
     margin-bottom:15px;
-
 }
 
 .hero h1{
-
     font-size:60px;
-
     font-weight:700;
-
 }
 
 .hero h3{
-
     color:#38BDF8;
-
     min-height:45px;
-
     margin:20px 0;
-
 }
 
 .hero p{
-
     color:#CBD5E1;
-
     margin-bottom:35px;
-
 }
 
 .profile-img{
-
     width:380px;
-
     border-radius:50%;
-
     border:8px solid #3B82F6;
-
     box-shadow:0 20px 50px rgba(0,0,0,.4);
+    transition:.4s;
+}
 
+.profile-img:hover{
+    transform:scale(1.05);
 }
 
 /* ===========================
@@ -149,33 +117,21 @@ section{
 =========================== */
 
 .btn-primary{
-
     background:#2563EB;
-
     border:none;
-
     padding:12px 28px;
-
     border-radius:30px;
-
     transition:.3s;
-
 }
 
 .btn-primary:hover{
-
     background:#1D4ED8;
-
     transform:translateY(-3px);
-
 }
 
 .btn-outline-light{
-
     border-radius:30px;
-
     padding:12px 28px;
-
 }
 
 /* ===========================
@@ -183,131 +139,35 @@ section{
 =========================== */
 
 .skills{
-
     background:#111827;
-
 }
 
 .skill-card{
-
     background:#1E293B;
-
     padding:35px;
-
     text-align:center;
-
     border-radius:15px;
-
     transition:.4s;
-
     margin-bottom:30px;
-
 }
 
 .skill-card:hover{
-
     transform:translateY(-10px);
-
     background:#2563EB;
-
 }
 
 .skill-card i{
-
     font-size:50px;
-
     margin-bottom:20px;
-
     color:#38BDF8;
-
 }
 
 .skill-card:hover i{
-
-    color:white;
-
+    color:#ffffff;
 }
 
 .skill-card h5{
-
     margin-top:10px;
-
-}
-
-/* ===========================
-   About
-=========================== */
-
-h2{
-
-    font-size:42px;
-
-    margin-bottom:25px;
-
-    font-weight:700;
-
-}
-
-p{
-
-    color:#CBD5E1;
-
-}
-
-/* ===========================
-   Footer
-=========================== */
-
-footer{
-
-    background:#020617;
-
-    padding:40px 0;
-
-}
-
-footer h5{
-
-    color:#3B82F6;
-
-}
-
-.social{
-
-    margin-top:20px;
-
-}
-
-.social a{
-
-    width:45px;
-
-    height:45px;
-
-    display:inline-flex;
-
-    justify-content:center;
-
-    align-items:center;
-
-    background:#1E293B;
-
-    border-radius:50%;
-
-    margin:0 8px;
-
-    color:white;
-
-    transition:.3s;
-
-}
-
-.social a:hover{
-
-    background:#2563EB;
-
-    transform:translateY(-5px);
-
 }
 
 /* ===========================
@@ -315,39 +175,113 @@ footer h5{
 =========================== */
 
 .card{
-
     background:#1E293B;
-
     border:none;
-
     border-radius:15px;
-
     color:white;
-
+    transition:.3s;
 }
 
 .card:hover{
-
     transform:translateY(-8px);
-
-    transition:.3s;
-
 }
 
 /* ===========================
-   Utilities
+   Typography
 =========================== */
 
+h2{
+    font-size:42px;
+    margin-bottom:25px;
+    font-weight:700;
+}
+
+p{
+    color:#CBD5E1;
+}
+
 .text-primary{
-
     color:#3B82F6 !important;
-
 }
 
 .bg-primary{
-
     background:#2563EB !important;
+}
 
+/* ===========================
+   Footer
+=========================== */
+
+footer{
+    background:#020617;
+    padding:40px 0;
+}
+
+footer h5{
+    color:#3B82F6;
+}
+
+.social{
+    margin-top:20px;
+}
+
+.social a{
+    width:45px;
+    height:45px;
+    display:inline-flex;
+    justify-content:center;
+    align-items:center;
+    background:#1E293B;
+    border-radius:50%;
+    margin:0 8px;
+    color:white;
+    transition:.3s;
+}
+
+.social a:hover{
+    background:#2563EB;
+    transform:translateY(-5px);
+}
+
+/* ===========================
+   Fade Animation
+=========================== */
+
+.fade{
+    opacity:0;
+    transform:translateY(40px);
+    transition:1s ease;
+}
+
+.fade.show{
+    opacity:1;
+    transform:translateY(0);
+}
+
+/* ===========================
+   Back To Top Button
+=========================== */
+
+#topBtn{
+    position:fixed;
+    right:20px;
+    bottom:20px;
+    width:50px;
+    height:50px;
+    border:none;
+    border-radius:50%;
+    background:#2563EB;
+    color:#fff;
+    cursor:pointer;
+    display:none;
+    z-index:999;
+    transition:.3s;
+    box-shadow:0 10px 25px rgba(0,0,0,.3);
+}
+
+#topBtn:hover{
+    background:#1D4ED8;
+    transform:translateY(-5px);
 }
 
 /* ===========================
@@ -355,27 +289,18 @@ footer h5{
 =========================== */
 
 ::-webkit-scrollbar{
-
     width:8px;
-
 }
 
 ::-webkit-scrollbar-track{
-
     background:#111827;
-
 }
 
 ::-webkit-scrollbar-thumb{
-
     background:#2563EB;
-
     border-radius:20px;
-
 }
 
 ::-webkit-scrollbar-thumb:hover{
-
     background:#3B82F6;
-
 }
