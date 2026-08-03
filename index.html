@@ -446,6 +446,15 @@
     .logo-aws {
       color: #ff9900;
     }
+    .logo-cisco {
+      color: #1ba0d7;
+    }
+    .logo-kubernetes {
+      color: #326ce5;
+    }
+    .logo-it {
+      color: #0b5e8a;
+    }
 
     /* ----- projects ----- */
     .project-grid {
@@ -749,13 +758,13 @@
       <h2>Vendor certifications & training</h2>
       <div class="section-subtitle">Official vendor certifications · specialized training</div>
       <div class="credential-grid">
-        <!-- vendor certifications with logos from reference -->
+        <!-- vendor certifications with logos -->
         <div class="credential-card vendor-cert">
           <i class="fas fa-certificate" style="color:#b8860b;"></i>
           <h4>RHCSA</h4>
           <div class="issuer">Red Hat Certified System Administrator</div>
           <span class="type-badge type-cert">
-            <span class="vendor-item"><i class="fab fa-redhat"></i> Red Hat</span> Certified
+            <span class="vendor-item"><i class="fab fa-redhat logo-redhat"></i> Red Hat</span> Certified
           </span>
         </div>
         <div class="credential-card vendor-cert">
@@ -763,34 +772,42 @@
           <h4>AWS Certified Solutions Architect</h4>
           <div class="issuer">Amazon Web Services (Associate)</div>
           <span class="type-badge type-cert">
-            <span class="vendor-item"><i class="fab fa-aws"></i> AWS</span> Certified
+            <span class="vendor-item"><i class="fab fa-aws logo-aws"></i> AWS</span> Certified
           </span>
         </div>
 
-        <!-- training (non-vendor) -->
+        <!-- training with vendor logos -->
         <div class="credential-card training-item">
           <i class="fas fa-graduation-cap" style="color:#0b5e8a;"></i>
           <h4>RHCE</h4>
           <div class="issuer">Linux Pathshala · 4 months</div>
-          <span class="type-badge type-training"><i class="fas fa-book-open"></i> Training</span>
+          <span class="type-badge type-training">
+            <span class="vendor-item"><i class="fab fa-redhat logo-redhat"></i> Red Hat</span> Training
+          </span>
         </div>
         <div class="credential-card training-item">
           <i class="fas fa-graduation-cap" style="color:#0b5e8a;"></i>
           <h4>CKA</h4>
           <div class="issuer">bongoDev · 2 weeks (day-long)</div>
-          <span class="type-badge type-training"><i class="fas fa-book-open"></i> Training</span>
+          <span class="type-badge type-training">
+            <span class="vendor-item"><i class="fas fa-cubes logo-kubernetes"></i> Kubernetes</span> Training
+          </span>
         </div>
         <div class="credential-card training-item">
           <i class="fas fa-graduation-cap" style="color:#0b5e8a;"></i>
           <h4>CCNA</h4>
           <div class="issuer">New Horizon Computer Learning Center · 3 months</div>
-          <span class="type-badge type-training"><i class="fas fa-book-open"></i> Training</span>
+          <span class="type-badge type-training">
+            <span class="vendor-item"><i class="fas fa-network-wired logo-cisco"></i> Cisco</span> Training
+          </span>
         </div>
         <div class="credential-card training-item">
           <i class="fas fa-graduation-cap" style="color:#0b5e8a;"></i>
           <h4>IT Support Technician</h4>
           <div class="issuer">Sherpur Technical School & College · 4 months</div>
-          <span class="type-badge type-training"><i class="fas fa-book-open"></i> Training</span>
+          <span class="type-badge type-training">
+            <span class="vendor-item"><i class="fas fa-laptop-code logo-it"></i> IT</span> Training
+          </span>
         </div>
       </div>
     </div>
