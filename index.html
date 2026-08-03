@@ -1,121 +1,195 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Md. Hafizur Rahman · Cloud & DevOps Portfolio</title>
-  <!-- Font Awesome for icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Md. Hafizur Rahman · Cloud & DevOps Engineer</title>
+  <!-- Google Font & Font Awesome -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
   <style>
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
-      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     }
 
     body {
-      background: #f7fafc;
-      color: #1e293b;
-      line-height: 1.6;
-      padding: 2rem 1rem;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: #f1f6fd;
+      color: #0b2a41;
+      padding: 2rem 1.2rem;
+      line-height: 1.5;
     }
 
     .container {
-      max-width: 1200px;
+      max-width: 1280px;
       margin: 0 auto;
-      background: white;
-      border-radius: 2rem;
-      box-shadow: 0 20px 60px rgba(0,0,0,0.06);
-      padding: 2.5rem 2rem;
+      background: #ffffff;
+      border-radius: 2.8rem;
+      box-shadow: 0 30px 80px rgba(10, 30, 60, 0.06);
+      padding: 2.8rem 2.8rem;
+      transition: all 0.2s ease;
     }
 
-    /* header / profile */
-    .profile-header {
+    /* animations */
+    .fade-in {
+      animation: fadeUp 0.6s ease forwards;
+      opacity: 0;
+    }
+    .fade-in-d1 { animation-delay: 0.05s; }
+    .fade-in-d2 { animation-delay: 0.1s; }
+    .fade-in-d3 { animation-delay: 0.15s; }
+    .fade-in-d4 { animation-delay: 0.2s; }
+    .fade-in-d5 { animation-delay: 0.25s; }
+
+    @keyframes fadeUp {
+      0% { opacity: 0; transform: translateY(14px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+    .card-hover {
+      transition: transform 0.2s ease, box-shadow 0.25s ease, border-color 0.2s;
+    }
+    .card-hover:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 18px 40px -12px rgba(0, 40, 80, 0.12);
+      border-color: #b6d0e8;
+    }
+
+    /* ----- header ----- */
+    .profile-row {
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
       align-items: center;
-      border-bottom: 1px solid #e9edf2;
+      border-bottom: 1px solid #e6edf6;
       padding-bottom: 2rem;
-      margin-bottom: 2rem;
+      margin-bottom: 2.2rem;
     }
 
-    .profile-info h1 {
-      font-size: 2.6rem;
-      font-weight: 700;
+    .profile-name h1 {
+      font-size: 2.8rem;
+      font-weight: 800;
       letter-spacing: -0.02em;
-      background: linear-gradient(145deg, #0b2b4a, #1a4b6d);
+      background: linear-gradient(145deg, #0b2b4a, #1f5880);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
+      margin-bottom: 0.1rem;
     }
 
-    .profile-info .badge {
-      background: #dbeafe;
-      color: #1e4b7a;
-      padding: 0.25rem 1rem;
-      border-radius: 30px;
-      font-size: 0.9rem;
-      font-weight: 600;
-      display: inline-block;
+    .profile-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem 0.8rem;
       margin-top: 0.3rem;
     }
 
-    .profile-contact {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1.2rem;
-      background: #f1f5f9;
-      padding: 0.8rem 1.5rem;
-      border-radius: 50px;
-      font-size: 0.95rem;
+    .tag {
+      background: #eaf0f9;
+      color: #1a4a6e;
+      padding: 0.2rem 1.1rem;
+      border-radius: 30px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.3px;
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
     }
 
-    .profile-contact a {
-      color: #1e293b;
+    .tag i {
+      font-size: 0.7rem;
+      color: #2563eb;
+    }
+
+    .contact-badge {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.8rem 1.8rem;
+      background: #f2f7fd;
+      padding: 0.7rem 2rem;
+      border-radius: 60px;
+      font-size: 0.9rem;
+      align-items: center;
+      border: 1px solid #dfeaf5;
+    }
+
+    .contact-badge a {
+      color: #1a3450;
       text-decoration: none;
       display: inline-flex;
       align-items: center;
       gap: 0.4rem;
+      transition: 0.2s;
     }
 
-    .profile-contact a i {
+    .contact-badge a i {
       color: #2563eb;
       width: 1.2rem;
     }
 
-    /* grid layout */
-    .grid-2 {
+    .contact-badge a:hover {
+      color: #2563eb;
+    }
+
+    /* summary bar */
+    .summary-bar {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      background: #f3f9ff;
+      padding: 1rem 2rem;
+      border-radius: 60px;
+      margin-bottom: 2.8rem;
+      align-items: center;
+      gap: 0.8rem 1.5rem;
+      border: 1px solid #e2ebf6;
+    }
+
+    .summary-bar span {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-weight: 500;
+      color: #1c3f5c;
+    }
+
+    .summary-bar i {
+      color: #2563eb;
+      font-size: 1rem;
+      width: 1.2rem;
+    }
+
+    /* grid */
+    .grid-2col {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 2.5rem;
-      margin-top: 1.5rem;
+      gap: 2rem;
     }
 
     .card {
       background: #ffffff;
-      border-radius: 1.5rem;
-      padding: 1.5rem 1.8rem;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.02);
-      border: 1px solid #edf2f7;
-      transition: 0.2s ease;
-    }
-
-    .card:hover {
-      border-color: #cbd5e1;
+      border-radius: 2rem;
+      padding: 1.8rem 2rem;
+      border: 1px solid #eaf0f7;
+      transition: all 0.2s ease;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.01);
     }
 
     .card-title {
       font-size: 1.2rem;
-      font-weight: 600;
-      color: #0f2b44;
-      border-left: 5px solid #2563eb;
-      padding-left: 0.8rem;
-      margin-bottom: 1.2rem;
+      font-weight: 700;
+      color: #0b2b4a;
       display: flex;
       align-items: center;
-      gap: 0.5rem;
+      gap: 0.6rem;
+      margin-bottom: 1.4rem;
+      border-left: 5px solid #2563eb;
+      padding-left: 0.9rem;
     }
 
     .card-title i {
@@ -123,76 +197,42 @@
       font-size: 1.3rem;
     }
 
-    .skill-tag {
-      display: inline-block;
-      background: #eef2f6;
-      padding: 0.2rem 0.9rem;
-      border-radius: 30px;
-      font-size: 0.8rem;
-      font-weight: 500;
-      color: #1e3b5c;
-      margin: 0.2rem 0.2rem;
-    }
-
-    .skill-bar-wrap {
-      margin: 0.8rem 0;
-    }
-
-    .skill-bar-label {
-      display: flex;
-      justify-content: space-between;
-      font-size: 0.9rem;
-      font-weight: 500;
-    }
-
-    .skill-bar-bg {
-      width: 100%;
-      height: 6px;
-      background: #e2e8f0;
-      border-radius: 12px;
-      margin-top: 4px;
-    }
-
-    .skill-bar-fill {
-      height: 6px;
-      border-radius: 12px;
-      background: linear-gradient(90deg, #2563eb, #3b82f6);
-    }
-
     .exp-item {
-      margin-bottom: 1.5rem;
+      margin-bottom: 1.2rem;
     }
 
     .exp-item h4 {
       font-weight: 700;
-      font-size: 1.05rem;
+      font-size: 1rem;
       color: #0b2b4a;
     }
 
     .exp-meta {
+      font-size: 0.8rem;
+      color: #4f6b86;
       display: flex;
       flex-wrap: wrap;
-      gap: 0.5rem 1.2rem;
-      font-size: 0.85rem;
-      color: #475569;
-      margin: 0.2rem 0 0.4rem;
+      gap: 0.2rem 1rem;
+      margin: 0.1rem 0 0.2rem;
     }
 
     .exp-meta i {
-      margin-right: 0.3rem;
       color: #3b82f6;
+      width: 1rem;
     }
 
     .bullet-list {
       list-style: none;
-      padding-left: 0.2rem;
+      padding-left: 0;
+      margin-top: 0.2rem;
     }
 
     .bullet-list li {
       padding-left: 1.2rem;
       position: relative;
-      margin-bottom: 0.3rem;
-      font-size: 0.92rem;
+      font-size: 0.88rem;
+      margin-bottom: 0.2rem;
+      color: #1f3c57;
     }
 
     .bullet-list li::before {
@@ -200,81 +240,157 @@
       position: absolute;
       left: 0;
       color: #2563eb;
+      font-weight: 600;
     }
 
-    .cert-badge {
-      background: #f8fafc;
-      border-radius: 40px;
-      padding: 0.3rem 1.2rem;
-      border: 1px solid #e2e8f0;
-      display: inline-block;
-      margin: 0.2rem 0.3rem 0.2rem 0;
-      font-size: 0.8rem;
+    .skill-chip {
+      background: #eef4fa;
+      padding: 0.25rem 1rem;
+      border-radius: 30px;
+      font-size: 0.75rem;
       font-weight: 500;
+      color: #1b3d5a;
+      display: inline-block;
+      margin: 0.1rem 0.15rem;
+      border: 1px solid transparent;
+      transition: 0.15s;
     }
 
-    .inline-icon {
-      margin-right: 0.4rem;
+    .skill-chip i {
+      margin-right: 4px;
       color: #2563eb;
     }
 
-    .row-3 {
+    .skill-chip:hover {
+      background: #e2ebf6;
+      border-color: #b6cde3;
+    }
+
+    .skill-bar {
+      margin: 0.6rem 0;
+    }
+
+    .skill-bar-label {
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.85rem;
+      font-weight: 500;
+    }
+
+    .skill-bar-bg {
+      height: 6px;
+      background: #e1e9f2;
+      border-radius: 20px;
+      margin-top: 3px;
+    }
+
+    .skill-bar-fill {
+      height: 6px;
+      border-radius: 20px;
+      background: linear-gradient(90deg, #2563eb, #4b8bf7);
+      width: 0%;
+      transition: width 0.6s ease;
+    }
+
+    .badge-cert {
+      background: #ecf3fa;
+      border-radius: 40px;
+      padding: 0.25rem 1.2rem;
+      border: 1px solid #d7e2ef;
+      display: inline-block;
+      margin: 0.2rem 0.2rem 0.2rem 0;
+      font-size: 0.7rem;
+      font-weight: 600;
+      color: #1c405e;
+      transition: 0.15s;
+    }
+
+    .badge-cert i {
+      margin-right: 5px;
+      color: #2563eb;
+    }
+
+    .badge-cert:hover {
+      background: #e2ebf6;
+      border-color: #a8c0d9;
+    }
+
+    .divider-light {
+      border: none;
+      border-top: 1px solid #e4ecf5;
+      margin: 1rem 0;
+    }
+
+    /* vendor certification block */
+    .vendor-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.8rem 1.5rem;
+      background: #f6faff;
+      border-radius: 2rem;
+      padding: 0.8rem 1.5rem;
+      border: 1px solid #e0ebf7;
+      margin-top: 0.5rem;
+    }
+
+    .vendor-item {
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-weight: 500;
+      font-size: 0.85rem;
+    }
+
+    .vendor-item i {
+      font-size: 1.2rem;
+      color: #2563eb;
+    }
+
+    /* stats row */
+    .stats-row {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 1.2rem;
-      margin-top: 1rem;
+      margin-top: 2.8rem;
     }
 
-    .stat-box {
-      background: #f8fafc;
-      border-radius: 1.2rem;
-      padding: 0.8rem 0.5rem;
+    .stat-item {
+      background: #f7faff;
+      border-radius: 2rem;
+      padding: 1rem 0.5rem;
       text-align: center;
-      border: 1px solid #eef2f6;
+      border: 1px solid #e7eef8;
+      transition: 0.2s;
     }
 
-    .stat-box .number {
-      font-size: 1.6rem;
+    .stat-item:hover {
+      background: #f2f8ff;
+      border-color: #c8d9ed;
+    }
+
+    .stat-item .num {
+      font-size: 2.2rem;
       font-weight: 700;
-      color: #1e4b7a;
+      color: #1a4b73;
     }
 
-    @media (max-width: 800px) {
-      .grid-2 {
-        grid-template-columns: 1fr;
-        gap: 1.5rem;
-      }
-      .row-3 {
-        grid-template-columns: 1fr 1fr;
-      }
-      .profile-header {
-        flex-direction: column;
-        align-items: start;
-        gap: 1.2rem;
-      }
-      .profile-contact {
-        border-radius: 30px;
-        width: 100%;
-        justify-content: center;
-      }
+    /* footer */
+    .footer-contact {
+      margin-top: 2.8rem;
+      padding-top: 2rem;
+      border-top: 1px solid #e6edf6;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+      font-size: 0.9rem;
+      color: #2d4b68;
     }
 
-    @media (max-width: 500px) {
-      .row-3 {
-        grid-template-columns: 1fr;
-      }
-      .container {
-        padding: 1.5rem 1rem;
-      }
-    }
-
-    .footer-note {
-      margin-top: 2.5rem;
-      text-align: center;
-      font-size: 0.85rem;
-      color: #64748b;
-      border-top: 1px solid #e9edf2;
-      padding-top: 1.5rem;
+    .footer-contact i {
+      color: #2563eb;
+      width: 1.2rem;
     }
 
     .signature {
@@ -282,20 +398,44 @@
       color: #0b2b4a;
     }
 
-    .badge-soft {
-      background: #dbeafe;
-      color: #1e4b7a;
-      border-radius: 30px;
-      padding: 0.15rem 1rem;
-      font-size: 0.75rem;
-      font-weight: 600;
-      display: inline-block;
+    /* responsive */
+    @media (max-width: 900px) {
+      .grid-2col {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+      }
+      .profile-row {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+      }
+      .contact-badge {
+        width: 100%;
+        justify-content: center;
+        border-radius: 40px;
+      }
+      .summary-bar {
+        flex-direction: column;
+        align-items: flex-start;
+        border-radius: 2rem;
+      }
+      .stats-row {
+        grid-template-columns: 1fr 1fr;
+      }
+      .container {
+        padding: 1.8rem 1.2rem;
+      }
     }
 
-    hr {
-      border: none;
-      border-top: 1px solid #e2e8f0;
-      margin: 1.2rem 0;
+    @media (max-width: 500px) {
+      .stats-row {
+        grid-template-columns: 1fr;
+      }
+      .vendor-grid {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+      }
     }
   </style>
 </head>
@@ -303,153 +443,203 @@
 <div class="container">
 
   <!-- header -->
-  <div class="profile-header">
-    <div class="profile-info">
+  <div class="profile-row fade-in fade-in-d1">
+    <div class="profile-name">
       <h1>Md. Hafizur Rahman</h1>
-      <div class="badge"><i class="fas fa-cloud" style="margin-right: 6px;"></i>Cloud & DevOps Engineer</div>
-      <div style="margin-top: 8px; display: flex; flex-wrap: wrap; gap: 0.5rem;">
-        <span class="badge-soft"><i class="fas fa-certificate"></i> RHCSA · AWS SAA</span>
-        <span class="badge-soft"><i class="fas fa-server"></i> 5.5+ years IT</span>
+      <div class="profile-tags">
+        <span class="tag"><i class="fas fa-cloud"></i> Cloud & DevOps Engineer</span>
+        <span class="tag"><i class="fas fa-certificate"></i> RHCSA · AWS SAA</span>
+        <span class="tag"><i class="fas fa-server"></i> 5.5+ years IT</span>
       </div>
     </div>
-    <div class="profile-contact">
+    <div class="contact-badge">
       <a href="mailto:hafizurrahman.cse2000@gmail.com"><i class="fas fa-envelope"></i>hafizur.cse</a>
       <a href="#"><i class="fas fa-phone-alt"></i>01733-659094</a>
       <a href="#"><i class="fas fa-map-pin"></i>Dhaka, BD</a>
     </div>
   </div>
 
-  <!-- summary + stats -->
-  <div style="display: flex; flex-wrap: wrap; gap: 1.5rem; justify-content: space-between; background: #f1f6fc; padding: 1.2rem 1.8rem; border-radius: 2rem; margin-bottom: 2rem;">
-    <div><i class="fas fa-bullseye" style="color: #2563eb; margin-right: 8px;"></i> <strong>Career objective:</strong> System Admin · Cloud · DevOps</div>
-    <div><i class="fas fa-calendar-alt" style="color: #2563eb; margin-right: 8px;"></i> <strong>5.5+</strong> years total experience</div>
-    <div><i class="fas fa-microchip" style="color: #2563eb; margin-right: 8px;"></i> AWS · Kubernetes · Linux · Monitoring</div>
+  <!-- summary bar -->
+  <div class="summary-bar fade-in fade-in-d2">
+    <span><i class="fas fa-bullseye"></i> <strong>Career objective:</strong> System Admin · Cloud · DevOps</span>
+    <span><i class="fas fa-calendar-alt"></i> <strong>5.5+</strong> years total experience</span>
+    <span><i class="fas fa-microchip"></i> AWS · Kubernetes · Linux · Monitoring</span>
   </div>
 
-  <!-- grid main -->
-  <div class="grid-2">
+  <!-- main grid -->
+  <div class="grid-2col">
 
-    <!-- LEFT COLUMN: experience, certs, education -->
+    <!-- LEFT COLUMN -->
     <div>
       <!-- Experience -->
-      <div class="card">
+      <div class="card card-hover fade-in fade-in-d3">
         <div class="card-title"><i class="fas fa-briefcase"></i> Experience</div>
+
         <div class="exp-item">
           <h4>Engineer, Network Operations</h4>
-          <div class="exp-meta"><i class="fas fa-building"></i>Genuity Systems Ltd. <span>|</span> <i class="fas fa-calendar-alt"></i>Oct 2024 – present</div>
-          <ul class="bullet-list">
-            <li>Network operations, cloud & system administration.</li>
-          </ul>
+          <div class="exp-meta"><i class="fas fa-building"></i> Genuity Systems Ltd. · <i class="fas fa-calendar-alt"></i> Oct 2024 – present</div>
+          <ul class="bullet-list"><li>Network operations, cloud & system administration, 24/7 support.</li></ul>
         </div>
+
         <div class="exp-item">
           <h4>Support Engineer, NOC (A2P SMS)</h4>
-          <div class="exp-meta"><i class="fas fa-building"></i>Infozillion Teletech BD Ltd. <span>|</span> <i class="fas fa-calendar-alt"></i>Aug 2023 – Oct 2024</div>
-          <ul class="bullet-list"><li>NOC support, A2P SMS platform monitoring.</li></ul>
+          <div class="exp-meta"><i class="fas fa-building"></i> Infozillion Teletech BD Ltd. · <i class="fas fa-calendar-alt"></i> Aug 2023 – Oct 2024</div>
+          <ul class="bullet-list"><li>NOC support, A2P SMS platform monitoring, troubleshooting.</li></ul>
         </div>
+
         <div class="exp-item">
           <h4>Support Engineer, NOC (ISP)</h4>
-          <div class="exp-meta"><i class="fas fa-building"></i>Tuhin Enterprise (ISP) <span>|</span> <i class="fas fa-calendar-alt"></i>Nov 2021 – Aug 2023</div>
+          <div class="exp-meta"><i class="fas fa-building"></i> Tuhin Enterprise · <i class="fas fa-calendar-alt"></i> Nov 2021 – Aug 2023</div>
         </div>
+
         <div class="exp-item">
           <h4>Jr. Support Engineer, NOC</h4>
-          <div class="exp-meta"><i class="fas fa-building"></i>Amarnt System (Central Zone ISP) <span>|</span> <i class="fas fa-calendar-alt"></i>Jun 2020 – Jun 2021</div>
+          <div class="exp-meta"><i class="fas fa-building"></i> Amarnt System · <i class="fas fa-calendar-alt"></i> Jun 2020 – Jun 2021</div>
         </div>
-        <hr>
-        <div><i class="fas fa-award" style="color: #2563eb; margin-right: 8px;"></i> <strong>Vendor certifications:</strong> 
-          <span class="cert-badge"><i class="fab fa-redhat"></i> RHCSA</span>
-          <span class="cert-badge"><i class="fab fa-aws"></i> AWS Solutions Architect – Associate</span>
+
+        <hr class="divider-light" />
+
+        <!-- Vendor Certification - professionally displayed -->
+        <div style="margin-top: 0.2rem;">
+          <div style="display: flex; align-items: center; gap: 0.6rem; margin-bottom: 0.6rem;">
+            <i class="fas fa-award" style="color: #2563eb; font-size: 1.1rem;"></i>
+            <strong style="font-size: 0.95rem;">Vendor Certifications</strong>
+          </div>
+          <div class="vendor-grid">
+            <span class="vendor-item"><i class="fab fa-redhat"></i> RHCSA</span>
+            <span class="vendor-item"><i class="fab fa-aws"></i> AWS Solutions Architect – Associate</span>
+          </div>
         </div>
       </div>
 
       <!-- Education -->
-      <div class="card" style="margin-top: 1.5rem;">
+      <div class="card card-hover fade-in fade-in-d4" style="margin-top: 1.5rem;">
         <div class="card-title"><i class="fas fa-graduation-cap"></i> Education</div>
-        <div><strong>B.Sc. in CSE</strong> · CGPA 3.84 · 2024 <br> <span style="color: #475569;">University of South Asia</span></div>
-        <div style="margin-top: 0.8rem;"><strong>Diploma in Engineering (CSE)</strong> · CGPA 3.96 · 2020 <br> <span style="color: #475569;">Sherpur Technical School & College</span></div>
-        <div style="margin-top: 0.8rem;"><strong>S.S.C.</strong> · GPA 4.22 · 2016 <br> <span style="color: #475569;">Tirsha Basaria Janakollayan High School</span></div>
-        <hr>
-        <div><i class="fas fa-certificate" style="color: #2563eb; margin-right: 6px;"></i> <strong>Trainings:</strong> IT Support Technician (Competent), CCNP, RHCSA, RHCE, AWS, CKA (bongoDev)</div>
+        <div><strong>B.Sc. in CSE</strong> · CGPA 3.84 · 2024 <br /> <span style="color: #3b5d7a; font-size:0.9rem;">University of South Asia</span></div>
+        <div style="margin-top: 0.8rem;"><strong>Diploma in Engineering (CSE)</strong> · CGPA 3.96 · 2020 <br /> <span style="color: #3b5d7a; font-size:0.9rem;">Sherpur Technical School & College</span></div>
+        <div style="margin-top: 0.8rem;"><strong>S.S.C.</strong> · GPA 4.22 · 2016 <br /> <span style="color: #3b5d7a; font-size:0.9rem;">Tirsha Basaria Janakollayan High School</span></div>
+        <hr class="divider-light" />
+        <div><i class="fas fa-certificate" style="color: #2563eb; margin-right: 6px;"></i> <strong>Trainings:</strong> IT Support Technician (Competent) · CCNP · RHCSA · RHCE · AWS · CKA (bongoDev)</div>
+      </div>
+
+      <!-- Reference -->
+      <div class="card card-hover fade-in fade-in-d5" style="margin-top: 1.5rem; background: #f9fcff;">
+        <div style="display: flex; flex-wrap: wrap; gap: 1.2rem;">
+          <div><i class="fas fa-user-circle" style="color: #2563eb;"></i> <strong>Md. Hafizur</strong><br /><span style="font-size:0.8rem; color: #2b4d6b;">10-Feb-2000 · Bangladesh</span></div>
+          <div><i class="fas fa-address-book" style="color: #2563eb;"></i> <strong>Reference</strong><br /><span style="font-size:0.8rem; color: #2b4d6b;">Md. Muzammel Hoque · Genuity Systems</span></div>
+        </div>
+        <div style="margin-top: 0.8rem; border-top: 1px dashed #dce6f0; padding-top: 0.8rem; font-size:0.85rem; color: #1f3f5a;">
+          <i class="fas fa-check-circle" style="color: #2563eb;"></i> I declare the information furnished above is true.
+        </div>
+        <div style="margin-top: 0.5rem; text-align: right; font-style: italic; color: #1f3f5a;">— Md. Hafizur Rahman</div>
       </div>
     </div>
 
-    <!-- RIGHT COLUMN: skills, cloud, k8s, monitoring -->
+    <!-- RIGHT COLUMN: skills -->
     <div>
-      <!-- Linux / virtualization -->
-      <div class="card">
+      <!-- Linux & Virtualization -->
+      <div class="card card-hover fade-in fade-in-d3">
         <div class="card-title"><i class="fab fa-linux"></i> Linux & Virtualization</div>
-        <div style="display: flex; flex-wrap: wrap; gap: 0.3rem 0.5rem; margin-bottom: 0.5rem;">
-          <span class="skill-tag"><i class="fas fa-check-circle" style="color: #2563eb;"></i> RHEL/CentOS</span>
-          <span class="skill-tag"><i class="fas fa-check-circle" style="color: #2563eb;"></i> User & permission</span>
-          <span class="skill-tag"><i class="fas fa-check-circle" style="color: #2563eb;"></i> NFS/NTP</span>
-          <span class="skill-tag"><i class="fas fa-check-circle" style="color: #2563eb;"></i> LVM · Partition</span>
-          <span class="skill-tag"><i class="fas fa-check-circle" style="color: #2563eb;"></i> SELinux · Firewalld</span>
-          <span class="skill-tag"><i class="fas fa-check-circle" style="color: #2563eb;"></i> Cron · systemd</span>
+        <div style="display: flex; flex-wrap: wrap; gap: 0.2rem 0.3rem; margin-bottom: 0.6rem;">
+          <span class="skill-chip"><i class="fas fa-check-circle"></i> RHEL/CentOS</span>
+          <span class="skill-chip"><i class="fas fa-check-circle"></i> User & permission</span>
+          <span class="skill-chip"><i class="fas fa-check-circle"></i> NFS/NTP</span>
+          <span class="skill-chip"><i class="fas fa-check-circle"></i> LVM · Partition</span>
+          <span class="skill-chip"><i class="fas fa-check-circle"></i> SELinux</span>
+          <span class="skill-chip"><i class="fas fa-check-circle"></i> Cron · systemd</span>
+          <span class="skill-chip"><i class="fas fa-check-circle"></i> Bash scripting</span>
+          <span class="skill-chip"><i class="fas fa-check-circle"></i> Vim/Nano</span>
         </div>
         <div><i class="fas fa-server" style="color: #2563eb; width: 1.2rem;"></i> <strong>Virtualization:</strong> VMware ESXi · Proxmox · Hyper-V · KVM</div>
-        <div style="margin-top: 0.6rem;"><i class="fas fa-terminal"></i> Vim · Vi · Nano · bash scripting</div>
+        <div style="margin-top: 0.4rem;"><i class="fas fa-terminal"></i> Troubleshooting · systemd · firewall</div>
       </div>
 
-      <!-- Cloud & AWS -->
-      <div class="card" style="margin-top: 1.5rem;">
+      <!-- AWS Cloud -->
+      <div class="card card-hover fade-in fade-in-d4" style="margin-top: 1.5rem;">
         <div class="card-title"><i class="fab fa-aws"></i> Cloud (AWS)</div>
         <ul class="bullet-list">
           <li>EC2 · Auto Scaling · Load Balancer · VPC · Subnet · NAT</li>
           <li>Security Groups · NACL · AMI · S3 · Route53 · IAM</li>
           <li>CloudFront · basic CI/CD · high availability design</li>
         </ul>
-        <div class="skill-bar-wrap">
+        <div class="skill-bar">
           <div class="skill-bar-label"><span>AWS infrastructure</span> <span>85%</span></div>
           <div class="skill-bar-bg"><div class="skill-bar-fill" style="width:85%"></div></div>
+        </div>
+        <div class="skill-bar">
+          <div class="skill-bar-label"><span>CI/CD & automation</span> <span>75%</span></div>
+          <div class="skill-bar-bg"><div class="skill-bar-fill" style="width:75%"></div></div>
         </div>
       </div>
 
       <!-- Kubernetes & Monitoring -->
-      <div class="card" style="margin-top: 1.5rem;">
+      <div class="card card-hover fade-in fade-in-d5" style="margin-top: 1.5rem;">
         <div class="card-title"><i class="fas fa-cubes"></i> Kubernetes</div>
-        <div style="display: flex; flex-wrap: wrap; gap: 0.3rem;">
-          <span class="skill-tag">Pods · Deployments</span>
-          <span class="skill-tag">Services (ClusterIP/NodePort/LB)</span>
-          <span class="skill-tag">StatefulSets · Jobs</span>
-          <span class="skill-tag">PV · Ingress · Rolling/Blue-green</span>
-          <span class="skill-tag">CI/CD · GitOps</span>
-          <span class="skill-tag">Monitoring & security</span>
+        <div style="display: flex; flex-wrap: wrap; gap: 0.2rem;">
+          <span class="skill-chip">Pods · Deployments</span>
+          <span class="skill-chip">Services (ClusterIP/NodePort/LB)</span>
+          <span class="skill-chip">StatefulSets · Jobs</span>
+          <span class="skill-chip">PV · Ingress</span>
+          <span class="skill-chip">Rolling/Blue-green</span>
+          <span class="skill-chip">CI/CD · GitOps</span>
+          <span class="skill-chip">Security & monitoring</span>
         </div>
-        <hr>
-        <div class="card-title" style="border-left-color: #0b8b5e; margin-top: 0.5rem;"><i class="fas fa-chart-line" style="color: #0b8b5e;"></i> Monitoring</div>
-        <div><span class="skill-tag"><i class="fas fa-check"></i> Grafana+Prometheus</span> <span class="skill-tag">Nagios</span> <span class="skill-tag">Cacti</span> <span class="skill-tag">LibreNMS</span></div>
-        <div style="margin-top: 0.5rem; font-size: 0.9rem;"><i class="fas fa-bell" style="color: #2563eb;"></i> Real-time dashboards · alerting</div>
+        <hr class="divider-light" />
+        <div class="card-title" style="border-left-color: #0f8b6a; margin-top: 0.2rem; font-size:1.1rem;"><i class="fas fa-chart-line" style="color: #0f8b6a;"></i> Monitoring</div>
+        <div>
+          <span class="skill-chip"><i class="fas fa-check"></i> Grafana+Prometheus</span>
+          <span class="skill-chip">Nagios</span>
+          <span class="skill-chip">Cacti</span>
+          <span class="skill-chip">LibreNMS</span>
+        </div>
+        <div style="margin-top: 0.5rem; font-size:0.9rem;"><i class="fas fa-bell" style="color: #2563eb;"></i> Real-time dashboards · alerting · infrastructure health</div>
       </div>
 
-      <!-- personal & reference quick -->
-      <div class="card" style="margin-top: 1.5rem; background: #fafcff;">
-        <div style="display: flex; gap: 1.2rem; flex-wrap: wrap;">
-          <div><i class="fas fa-user" style="color: #2563eb;"></i> <strong>MD. Hafizur</strong><br> <span style="font-size:0.85rem;">Bangladesh · 10-Feb-2000</span></div>
-          <div><i class="fas fa-address-book" style="color: #2563eb;"></i> <strong>Reference</strong><br> <span style="font-size:0.85rem;">Md. Muzammel Hoque · Genuity Systems</span></div>
-        </div>
-        <div style="margin-top: 0.8rem; border-top: 1px dashed #dce2ec; padding-top: 0.8rem; font-size:0.9rem;">
-          <i class="fas fa-check-circle" style="color: #2563eb;"></i> I declare the information furnished above is true.
-        </div>
-        <div style="margin-top: 0.6rem; text-align: right; font-style: italic; color: #334155;">— Md. Hafizur Rahman</div>
+      <!-- Container & Orchestration -->
+      <div class="card card-hover fade-in fade-in-d5" style="margin-top: 1.5rem;">
+        <div class="card-title" style="border-left-color: #d97706;"><i class="fas fa-docker" style="color: #d97706;"></i> Container & Orchestration</div>
+        <div><span class="skill-chip">Docker</span> <span class="skill-chip">Kubernetes</span> <span class="skill-chip">ECS</span> <span class="skill-chip">Helm</span></div>
+        <div style="margin-top: 0.4rem; font-size:0.9rem;">Stateless/Stateful apps · 3-tier deployment · PV</div>
       </div>
     </div>
   </div>
 
-  <!-- stats row: similar to naimul.cloud stats -->
-  <div class="row-3" style="margin-top: 2.2rem;">
-    <div class="stat-box"><span class="number">5.5+</span><br>Years IT Experience</div>
-    <div class="stat-box"><span class="number">4+</span><br>Cloud & DevOps</div>
-    <div class="stat-box"><span class="number">24/7</span><br>Uptime Support</div>
+  <!-- stats row -->
+  <div class="stats-row fade-in fade-in-d5">
+    <div class="stat-item"><span class="num">5.5+</span><br />Years IT Experience</div>
+    <div class="stat-item"><span class="num">4+</span><br />Cloud & DevOps</div>
+    <div class="stat-item"><span class="num">24/7</span><br />Uptime Support</div>
   </div>
 
-  <!-- footer / contact -->
-  <div class="footer-note">
-    <i class="fas fa-envelope" style="margin-right: 6px; color: #2563eb;"></i> hafizurrahman.cse2000@gmail.com · 
-    <i class="fas fa-phone-alt" style="margin-left: 12px; margin-right: 6px; color: #2563eb;"></i> 01733-659094 · 
-    <i class="fas fa-map-pin" style="margin-left: 12px; margin-right: 6px; color: #2563eb;"></i> Dhaka-1229, Bangladesh
-    <br>
-    <span style="font-size:0.8rem; color: #94a3b8;">House-27, Road-04, Nikunj-2, Khilkhet</span>
+  <!-- footer -->
+  <div class="footer-contact fade-in fade-in-d5">
+    <div>
+      <i class="fas fa-envelope"></i> hafizurrahman.cse2000@gmail.com &nbsp;|&nbsp;
+      <i class="fas fa-phone-alt"></i> 01733-659094
+    </div>
+    <div>
+      <i class="fas fa-map-pin"></i> House-27, Road-04, Nikunj-2, Khilkhet, Dhaka-1229
+    </div>
+    <div class="signature">
+      <i class="fas fa-pen-fancy"></i> Md. Hafizur Rahman
+    </div>
   </div>
+
 </div>
 <!-- end container -->
+
+<script>
+  // (optional) subtle animation for skill bars on load
+  document.addEventListener('DOMContentLoaded', function() {
+    const fills = document.querySelectorAll('.skill-bar-fill');
+    fills.forEach(fill => {
+      const width = fill.style.width;
+      fill.style.width = '0%';
+      setTimeout(() => {
+        fill.style.width = width;
+      }, 400);
+    });
+  });
+</script>
 </body>
 </html>
