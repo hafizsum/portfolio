@@ -102,6 +102,8 @@
       color: #0b5e8a;
       transition: 0.2s ease;
       font-weight: 500;
+      background: white;
+      cursor: pointer;
     }
 
     .btn-small:hover {
@@ -459,11 +461,11 @@
       margin-top: 0.7rem;
     }
 
-    /* ----- certification & training (distinct) ----- */
+    /* ----- certification & training (distinct) with verify btn ----- */
     .credential-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 1.8rem;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 2rem;
       margin-top: 1rem;
     }
 
@@ -474,6 +476,9 @@
       border: 1px solid #e2ebf5;
       transition: 0.2s;
       text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
 
     .credential-card:hover {
@@ -495,13 +500,14 @@
     .credential-card .issuer {
       font-size: 0.85rem;
       color: #2c4a66;
+      margin-bottom: 0.5rem;
     }
 
     .credential-card .type-badge {
       display: inline-flex;
       align-items: center;
       gap: 0.4rem;
-      margin-top: 0.6rem;
+      margin-top: 0.3rem;
       font-size: 0.7rem;
       font-weight: 600;
       padding: 0.25rem 1rem;
@@ -555,6 +561,35 @@
     }
     .logo-it {
       color: #0b5e8a;
+    }
+
+    /* verify button — opens link directly */
+    .verify-btn {
+      margin-top: 0.8rem;
+      background: transparent;
+      border: 1.5px solid #0b5e8a;
+      color: #0b5e8a;
+      padding: 0.3rem 1.2rem;
+      border-radius: 40px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: 0.2s;
+      letter-spacing: 0.3px;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.3rem;
+    }
+
+    .verify-btn i {
+      font-size: 0.8rem;
+      margin-bottom: 0;
+    }
+
+    .verify-btn:hover {
+      background: #0b5e8a;
+      color: white;
+      box-shadow: 0 4px 12px rgba(11, 94, 138, 0.25);
     }
 
     /* ----- projects ----- */
@@ -957,13 +992,13 @@
     </div>
   </section>
 
-  <!-- credentials: vendor certifications + training (distinct) -->
+  <!-- credentials: vendor certifications + training with DIRECT LINK verify buttons (no JS function) -->
   <section id="credentials" class="section-alt">
     <div class="container">
       <h2>Vendor certifications & training</h2>
-      <div class="section-subtitle">Official vendor certifications · specialized training</div>
+      <div class="section-subtitle">Official vendor certifications · specialized training · click to verify</div>
       <div class="credential-grid">
-        <!-- vendor certifications with logos -->
+        <!-- RHCSA - direct link to Red Hat verification -->
         <div class="credential-card vendor-cert">
           <i class="fas fa-certificate" style="color:#b8860b;"></i>
           <h4>RHCSA</h4>
@@ -971,7 +1006,12 @@
           <span class="type-badge type-cert">
             <span class="vendor-item"><i class="fab fa-redhat logo-redhat"></i> Red Hat</span> Certified
           </span>
+          <a href="https://www.redhat.com/verify/" target="_blank" class="verify-btn">
+            <i class="fas fa-check-circle"></i> Verify
+          </a>
         </div>
+
+        <!-- AWS Certified Solutions Architect - direct link to AWS verification -->
         <div class="credential-card vendor-cert">
           <i class="fas fa-certificate" style="color:#b8860b;"></i>
           <h4>AWS Certified Solutions Architect</h4>
@@ -979,9 +1019,12 @@
           <span class="type-badge type-cert">
             <span class="vendor-item"><i class="fab fa-aws logo-aws"></i> AWS</span> Certified
           </span>
+          <a href="https://aws.amazon.com/verification/" target="_blank" class="verify-btn">
+            <i class="fas fa-check-circle"></i> Verify
+          </a>
         </div>
 
-        <!-- training with vendor logos -->
+        <!-- RHCE training - direct link to Red Hat training verification -->
         <div class="credential-card training-item">
           <i class="fas fa-graduation-cap" style="color:#0b5e8a;"></i>
           <h4>RHCE</h4>
@@ -989,7 +1032,12 @@
           <span class="type-badge type-training">
             <span class="vendor-item"><i class="fab fa-redhat logo-redhat"></i> Red Hat</span> Training
           </span>
+          <a href="https://www.redhat.com/verify/" target="_blank" class="verify-btn">
+            <i class="fas fa-check-circle"></i> Verify
+          </a>
         </div>
+
+        <!-- CKA training - direct link to Linux Foundation verification -->
         <div class="credential-card training-item">
           <i class="fas fa-graduation-cap" style="color:#0b5e8a;"></i>
           <h4>CKA</h4>
@@ -997,7 +1045,12 @@
           <span class="type-badge type-training">
             <span class="vendor-item"><i class="fas fa-cubes logo-kubernetes"></i> Kubernetes</span> Training
           </span>
+          <a href="https://training.linuxfoundation.org/certification/verify/" target="_blank" class="verify-btn">
+            <i class="fas fa-check-circle"></i> Verify
+          </a>
         </div>
+
+        <!-- CCNA training - direct link to Cisco verification -->
         <div class="credential-card training-item">
           <i class="fas fa-graduation-cap" style="color:#0b5e8a;"></i>
           <h4>CCNA</h4>
@@ -1005,7 +1058,12 @@
           <span class="type-badge type-training">
             <span class="vendor-item"><i class="fas fa-network-wired logo-cisco"></i> Cisco</span> Training
           </span>
+          <a href="https://www.cisco.com/web/learning/certifications/verification/" target="_blank" class="verify-btn">
+            <i class="fas fa-check-circle"></i> Verify
+          </a>
         </div>
+
+        <!-- IT Support Technician training - example link (could be institution page) -->
         <div class="credential-card training-item">
           <i class="fas fa-graduation-cap" style="color:#0b5e8a;"></i>
           <h4>IT Support Technician</h4>
@@ -1013,6 +1071,9 @@
           <span class="type-badge type-training">
             <span class="vendor-item"><i class="fas fa-laptop-code logo-it"></i> IT</span> Training
           </span>
+          <a href="https://www.example.com/verify" target="_blank" class="verify-btn">
+            <i class="fas fa-check-circle"></i> Verify
+          </a>
         </div>
       </div>
     </div>
